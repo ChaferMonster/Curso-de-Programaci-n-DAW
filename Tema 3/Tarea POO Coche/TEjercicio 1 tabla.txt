@@ -1,0 +1,8 @@
+Clase: Coche
+
+Atributos: Color
+	   Aceleración
+	   Velocidad
+
+Métodos:   Acelerar
+	   Frenar

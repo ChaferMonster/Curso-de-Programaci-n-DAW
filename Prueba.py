@@ -280,7 +280,7 @@ class mandosamsung(Mando):
 """
 
 
-def requiere_autenticacion(funcion):
+"""def requiere_autenticacion(funcion):
     def envoltura():
         usuario_autenticado = True
 
@@ -296,4 +296,32 @@ def requiere_autenticacion(funcion):
 def funcion_restringida():
     print("Esto solo se ejecuta si estas autenticado")
 
-funcion_restringida()
+funcion_restringida()"""
+
+class pizza:
+    def __init__(self, ingredientes):
+        self.ingredientes = ingredientes
+        
+    @classmethod
+    def margarita(cls):
+        return cls(["tomate", "queso", "oregano"])
+    
+    def agregar_ingrediente(self, ingrediente):
+        self.ingredientes.append(ingrediente)
+
+    def ver_ingrediente(self):
+        for ing in self.ingredientes:
+            print(f"{ing}")
+
+
+    @staticmethod
+    def es_vegetariana(pizza):
+        if (pizza.ingredientes not in ["jamon", "pollo"]):
+            print("Es vegetariana")
+
+
+pizza1 = pizza.margarita()
+pizza1.ver_ingrediente()
+pizza1.agregar_ingrediente("cebolla")
+pizza1.ver_ingrediente()
+pizza.es_vegetariana(pizza1)
